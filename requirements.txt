@@ -1,0 +1,5 @@
+python3==3.10.10
+kivy==2.1.0
+kivymd==1.1.1
+plyer==2.1.0
+ffpyplayer==4.4.0

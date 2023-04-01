@@ -1,0 +1,3 @@
+This is the "mainfolder" Folder where all the files will be copied and stored using the Vault Program(sub.py)
+---
+ここは"mainfolder"フォルダーです。Vault Program(sub.py)で追加されたファイル全てがここでコピーされて保存されます。
