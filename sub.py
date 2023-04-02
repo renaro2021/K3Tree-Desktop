@@ -184,8 +184,16 @@ class mainApp(MDApp):
         for checkbox in self.checkboxlist:
             if checkbox.opacity == 0:
                 checkbox.opacity = 1
+                checkbox.size_hint_x = None
+                checkbox.size_hint_y = None
+                checkbox.width = 50
+                checkbox.heigt = 50
             else:
                 checkbox.opacity = 0
+                checkbox.size_hint_x = 0
+                checkbox.size_hint_y = 0
+                checkbox.width = 0
+                checkbox.height = 0
 
     def openfilechooser(self, instance):
         filechoose = filechooser.open_file(title="Select", multiple=True)
