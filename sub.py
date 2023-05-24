@@ -111,7 +111,7 @@ class mainApp(MDApp):
         view = ModalView(size_hint=(1, 1))
         layout = FloatLayout(size=(1, 1))
         view.add_widget(layout)
-        view.add_widget(videoplayer)
+        layout.add_widget(videoplayer)
 
         def toggleexit(*args):
             if exitbutton.opacity == 1:
@@ -170,7 +170,6 @@ class mainApp(MDApp):
 
     def checkboxactive(self, checkbox, value):
      if value:
-        checkbox.color = (0, 1, 0, 1)
         index = self.checkboxlist.index(checkbox)
         if self.checkboxlist[index].opacity != 0: 
             os.remove(self.imagepaths[index])
@@ -184,16 +183,8 @@ class mainApp(MDApp):
         for checkbox in self.checkboxlist:
             if checkbox.opacity == 0:
                 checkbox.opacity = 1
-                checkbox.size_hint_x = None
-                checkbox.size_hint_y = None
-                checkbox.width = 50
-                checkbox.heigt = 50
             else:
                 checkbox.opacity = 0
-                checkbox.size_hint_x = 0
-                checkbox.size_hint_y = 0
-                checkbox.width = 0
-                checkbox.height = 0
 
     def openfilechooser(self, instance):
         filechoose = filechooser.open_file(title="Select", multiple=True)
