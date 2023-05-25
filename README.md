@@ -6,6 +6,16 @@ This was made for a High School Project regarding Cross-Platform Programs using 
 
 Feel free to fork.
 
+##Status
+Working.
+
+Last tested : May 25, 2023.
+
+Machine : Windows10(x64) 
+
+Packages : Same as the recent requirements.txt
+
+
 ## Installation
 
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install the requirements.
