@@ -107,7 +107,7 @@ class mainApp(MDApp):
         MDApp.get_running_app().stop()
 
     def showvideo(self, video_path):
-        videoplayer = VideoPlayer(source=video_path, state='pause', options={'allow_stretch': True, 'eos': 'loop'}, allow_fullscreen=True)
+        videoplayer = VideoPlayer(source=video_path, state='pause', options={'allow_stretch': True, 'eos': 'loop'}, allow_fullscreen=False)
         view = ModalView(size_hint=(1, 1))
         layout = FloatLayout(size=(1, 1))
         view.add_widget(layout)
@@ -176,11 +176,10 @@ class mainApp(MDApp):
             del self.imagepaths[index]
             self.checkboxlist.remove(checkbox)
             checkbox.parent.parent.remove_widget(checkbox.parent)
-     else:
-        checkbox.color = (1, 1, 1, 1)
 
     def showcheckbox(self, instance):
         for checkbox in self.checkboxlist:
+            checkbox.visible = False
             if checkbox.opacity == 0:
                 checkbox.opacity = 1
             else:
