@@ -169,6 +169,7 @@ class mainApp(MDApp):
             self.screen.orientation = 'portrait'
 
     def checkboxactive(self, checkbox, value):
+     checkbox.active = False
      if value:
         index = self.checkboxlist.index(checkbox)
         if self.checkboxlist[index].opacity != 0: 
@@ -179,7 +180,6 @@ class mainApp(MDApp):
 
     def showcheckbox(self, instance):
         for checkbox in self.checkboxlist:
-            checkbox.visible = False
             if checkbox.opacity == 0:
                 checkbox.opacity = 1
             else:
