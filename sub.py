@@ -47,9 +47,9 @@ class mainApp(MDApp):
         mainfold = os.path.join(os.path.abspath(os.path.dirname(__file__)), "mainfolder")
 
         for filename in os.listdir(mainfold):
-            if filename.endswith('.jpg') or filename.endswith('.png') or filename.endswith('.gif'):
+            if filename.endswith('.jpg') or filename.endswith('.jpeg') or filename.endswith('.JPG') or filename.endswith('.JPEG') or filename.endswith('.png') or filename.endswith('.PNG') or filename.endswith('.gif') or filename.endswith('.GIF'):
                 self.imagepaths.append(os.path.join(mainfold, filename))
-            elif filename.endswith('.mp4') or filename.endswith('.avi') or filename.endswith('.mov'):
+            elif filename.endswith('.mp4') or filename.endswith('.MP4') or filename.endswith('.avi') or filename.endswith('.AVI') or filename.endswith('.mov') or filename.endswith('.MOV'):
                 self.imagepaths.append(os.path.join(mainfold, filename))
 
         self.currentimage = 0  
@@ -58,7 +58,7 @@ class mainApp(MDApp):
         box.bind(minimum_height=box.setter('height')) 
 
         for filename in os.listdir(mainfold):
-            if filename.endswith('.jpg') or filename.endswith('.png') or filename.endswith('.gif') or filename.endswith(".mp4") or filename.endswith('.avi') or filename.endswith('.mov'):
+            if filename.endswith('.jpg') or filename.endswith('.jpeg') or filename.endswith('.JPG') or filename.endswith('.JPEG') or filename.endswith('.png') or filename.endswith('.PNG') or filename.endswith('.gif') or filename.endswith('.GIF') or filename.endswith('.mp4') or filename.endswith('.MP4') or filename.endswith('.avi') or filename.endswith('.AVI') or filename.endswith('.mov') or filename.endswith('.MOV'):
                 layout = MDBoxLayout(orientation="horizontal", size_hint_y=None, height=50,width=50)
                 extension = os.path.splitext(filename)[1]
                 modifiedfilename = f"{filename[:10]}..{extension}" if len(filename) > 10 else filename
@@ -73,11 +73,11 @@ class mainApp(MDApp):
                 
                 box.add_widget(layout)
                 
-                if filename.endswith('.jpg') or filename.endswith('.png') or filename.endswith('.gif'):
+                if filename.endswith('.jpg') or filename.endswith('.jpeg') or filename.endswith('.JPG') or filename.endswith('.JPEG') or filename.endswith('.png') or filename.endswith('.PNG') or filename.endswith('.gif') or filename.endswith('.GIF'):
                     image = AsyncImage(source=os.path.join("mainfolder", filename), allow_stretch=True, keep_ratio=False, size_hint_x=None, width=50, height=50, pos_hint={ "right": 0 })
                     layout.add_widget(image)
                     image.bind(on_touch_down=self.imagepressed)
-                if filename.endswith('.mp4') or filename.endswith('.avi') or filename.endswith('.mov'):
+                if filename.endswith('.mp4') or filename.endswith('.MP4') or filename.endswith('.avi') or filename.endswith('.AVI') or filename.endswith('.mov') or filename.endswith('.MOV'):
                     video=MDIconButton(icon="video",  icon_size="25sp")
                     layout.add_widget(video)
                     video.bind(on_release=lambda instance, video_path=os.path.join("mainfolder", filename): self.showvideo(video_path))
