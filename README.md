@@ -9,12 +9,12 @@ Feel free to fork.
 ## Status
 Working.
 
-Last tested : May 25, 2023.
+Last tested : June 5, 2023.
 
 Machine : Windows10(x64) 
 
 Packages : Same as the recent requirements.txt
-
+ (NOTES : This program will only be tested and check for package updates once a month at the very least, further development etc. isn't planned nor promised unless exceptions noted in the Notes->Support below)
 
 ## Installation
 
