@@ -30,11 +30,13 @@ python3 main.py
 
 ```
 ## Features
-* Supported Image Format: .jpeg .png .gif
+* Supported Image Format: .jpg .JPG .jpeg .JPEG .png .PNG .gif .GIF
 
-* Supported Video Format: .mp4 .mov .avi
+* Supported Video Format: .mp4 .MP4 .mov .MOV .avi .AVI
 
 * Supports Japanese Text for Displaying Filenames (Doesn't Support Japanese UI)
+
+(NOTE : It supports [.jpg .jpeg .png .gif .mp4 .mov .avi] however it doesn't support extension that isn't all-small letters or all-big letters like .Jpeg or .pnG even if your computer is okay with it so please rename it to the supported formats above to display it in the vault properly)
 
 
 ## Notes
@@ -44,6 +46,7 @@ About this program having any added features, that won't be promised and likely 
 Security Bugs will be prioritzed. Other Bugs aren't promised in terms of fixing speed.
 
 It will likely continue to be updated so that it will run on modern devices.
+
 ### Recovery
 The files you saved on the vault aren't encrypted. You can just run the sub.py directly and RESET to have a new code then
 run main.py to access or view it again using the program.
@@ -53,6 +56,7 @@ py and then extract all files and recover them.
 
 As the program doesn't have a Share or Export function and only has an Import function,
 this very guide should be treated as a way to Share or Export the files in the vault instead.
+
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
