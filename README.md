@@ -26,8 +26,7 @@ pip install -r requirements.txt
 Then run main.py (Run it twice as if you succeed on setting the passcode at first, the program will quit itself)
 ```bash
 python3 main.py 
-#Python3.10.11 or under must be used. Kivy seeems to not support Python3.11 yet.
-
+I highly sugguest using Python3, more specifically Python3.10.11 As I haven't tested it on Python3.11
 ```
 ## Features
 * Supported Image Format: .jpg .JPG .jpeg .JPEG .png .PNG .gif .GIF
